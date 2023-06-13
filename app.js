@@ -4,95 +4,17 @@ boton_right=document.querySelector(".boton-right"),
 slider=document.querySelector("#slider"),
 carrusel_section=document.querySelectorAll(".carrusel-section"),
 final=document.querySelector(".final")
-final2=document.querySelector(".final2");
 let op=0,
 tamaño=100 / carrusel_section.length,
 cont=0,
 contador2,
-contador3,
-contacto_nombre=document.getElementById("nombres"),
-contacto_apellido=document.getElementById("apellido"),
-contacto_mail=document.getElementById("correo"),
-boton_contacto=document.getElementById("botons"),
-contacto_consulta=document.getElementById("consulta"),
-errores=document.getElementById("result"),
-Enviado=document.getElementById("result_enviado");
-function validar(){
-    let errores_1;
-    contacto_nombre.classList.remove("error")
-    contacto_apellido.classList.remove("error")
-    contacto_consulta.classList.remove("error")
-    contacto_mail.classList.remove("error")
-    Enviado.innerHTML="";
-    errores.innerHTML="";
-    if (contacto_nombre.value=="" ||contacto_nombre.value.length>20) {
-        errores_1=document.createElement("p");
-        errores.appendChild(errores_1);
-        errores_1.innerHTML="Nombre invalido";
-        contacto_nombre.classList.add("error")
-    }
-    if (contacto_apellido.value=="" ||contacto_nombre.value.length>20) {
-        errores_1=document.createElement("p");
-        errores.appendChild(errores_1);
-        errores_1.innerHTML="Apellido invalido";
-        contacto_apellido.classList.add("error")
-    }
-    if (contacto_consulta.value=="" ||contacto_nombre.value.length>200) {
-        errores_1=document.createElement("p");
-        errores.appendChild(errores_1);
-        errores_1.innerHTML="Consulta invalida";
-        contacto_consulta.classList.add("error")
-    }
-    if (contacto_mail.value=="") {
-        errores_1=document.createElement("p");
-        errores.appendChild(errores_1);
-        errores_1.innerHTML="Correo invalido";
-        contacto_mail.classList.add("error")
-    }
-    if (contacto_nombre.value.length>=1 &&
-        contacto_apellido.value.length>=1 &&
-        contacto_consulta.value.length>=1 &&
-        contacto_mail.value.length>=1) {
-            errores_1=document.createElement("p");
-            errores.appendChild(errores_1);
-            errores_1.innerHTML="Enviado exitosamente";
-            contador3=true;
-    }else{
-        contador3=false;
-        console.log("error");
-    }
-    console.log(contador3)
-    let datos
-    if (contador3) {
-        datos=document.createElement("p");
-        Enviado.appendChild(datos);
-        datos.innerHTML="Nombre: "+contacto_nombre.value;
-        datos=document.createElement("p");
-        Enviado.appendChild(datos);
-        datos.innerHTML="Apellido: "+contacto_apellido.value;
-        datos=document.createElement("p");
-        Enviado.appendChild(datos);
-        datos.innerHTML="Correo: "+contacto_mail.value;
-        datos=document.createElement("p");
-        Enviado.appendChild(datos);
-        datos.innerHTML="Consulta: "+contacto_consulta.value; 
-    }
-    contador2=true;
-    if (contador2) {
-        final.style.opacity="100%"
-    }
-    if (contador3) {
-        final2.style.opacity="100%"
-    }
-    return false;
-}
-
+contador3;
 
 if (boton_right) {
-    boton_right.addEventListener("click",e=> Right());
+    boton_right.addEventListener("click",()=> Right());
 }
 if (boton_left) {
-    boton_left.addEventListener("click",e=> left());
+    boton_left.addEventListener("click",()=> left());
 }
 
 function Right() {
@@ -121,6 +43,71 @@ function left() {
         slider.style.transition="all ease .8s"
     }
 }
-function contacto() {
-}
 
+function validar(){
+    let
+    nombre=document.getElementById("nombres"),
+    apellido=document.getElementById("apellido"),
+    email=document.getElementById("correo"),
+    consulta=document.getElementById("consulta"),
+    errores=document.getElementById("result"),
+    Enviado=document.getElementById("result_enviado");
+     let errores_1;
+     nombre.classList.remove("error")
+     apellido.classList.remove("error")
+     consulta.classList.remove("error")
+     email.classList.remove("error")
+     Enviado.innerHTML="";
+     errores.innerHTML="";
+     if (nombre.value=="" ||nombre.value.length>20) {
+         errores_1=document.createElement("p");
+         errores.appendChild(errores_1);
+         errores_1.innerHTML="Error. Nombre incorrecto";
+         nombre.classList.add("error")
+     }
+     if (apellido.value=="" ||nombre.value.length>20) {
+         errores_1=document.createElement("p");
+         errores.appendChild(errores_1);
+         errores_1.innerHTML="Error. Apellido incorrecto";
+         apellido.classList.add("error")
+     }
+     if (consulta.value=="" ||nombre.value.length>200) {
+         errores_1=document.createElement("p");
+         errores.appendChild(errores_1);
+         errores_1.innerHTML="Error. Consulta incorrecta";
+         consulta.classList.add("error")
+     }
+     if (email.value=="") {
+         errores_1=document.createElement("p");
+         errores.appendChild(errores_1);
+         errores_1.innerHTML="Error. Email incorrecto";
+         email.classList.add("error")
+     }
+     if (nombre.value.length>=1 &&
+         apellido.value.length>=1 &&
+         consulta.value.length>=1 &&
+         email.value.length>=1) {
+             errores_1=document.createElement("p");
+             errores.appendChild(errores_1);
+             errores_1.innerHTML="Consulta enviada correctamente";
+             contador3=true;
+     }else{
+         contador3=false;
+     }
+     let datos
+     if (contador3) {
+         datos=document.createElement("p");
+         Enviado.appendChild(datos);
+         datos.innerHTML="Su nombre: "+nombre.value;
+         datos=document.createElement("p");
+         Enviado.appendChild(datos);
+         datos.innerHTML="Su apellido: "+apellido.value;
+         datos=document.createElement("p");
+         Enviado.appendChild(datos);
+         datos.innerHTML="Su email: "+email.value;
+         datos=document.createElement("p");
+         Enviado.appendChild(datos);
+         datos.innerHTML="Su consulta: "+consulta.value; 
+     }
+     return false;
+ }
