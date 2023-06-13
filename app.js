@@ -2,10 +2,10 @@ const
 boton_left=document.querySelector(".boton-left"),
 boton_right=document.querySelector(".boton-right"),
 slider=document.querySelector("#slider"),
-carrusel_section=document.querySelectorAll(".carrusel-section"),
+carrousel=document.querySelectorAll(".carrusel-section"),
 final=document.querySelector(".final")
 let op=0,
-tamaño=100 / carrusel_section.length,
+tamaño=100 / carrousel.length,
 cont=0,
 contador2,
 contador3;
@@ -18,7 +18,7 @@ if (boton_left) {
 }
 
 function Right() {
-    if (cont >=carrusel_section.length-1) {
+    if (cont >=carrousel.length-1) {
         cont=0;
         op=0;
         slider.style.transform = `translate(-${op}%)`;
@@ -33,8 +33,8 @@ function Right() {
 function left() {
     cont--;
     if (cont <0) {
-        cont=carrusel_section.length-1;
-        op=tamaño*(carrusel_section.length-1);
+        cont=carrousel.length-1;
+        op=tamaño*(carrousel.length-1);
         slider.style.transform = `translate(-${op}%)`;
         slider.style.transition="all ease .8s"
     }else{

@@ -114,9 +114,8 @@ a:hover{
     margin-left: 20px;
     position: relative;
     width: 700px;
-    height: 400px;
+    height: 500px;
     background-color: #e0e0e0;
-    box-shadow: 7px 13px 37px black;
     overflow: hidden;
 }
 .carruseles{
