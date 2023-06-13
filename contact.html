@@ -8,31 +8,34 @@
     <link rel="stylesheet" href="Styles.css"/>
 </head>
 <body class="contact">
-    <div class="titulo">
-        <nav>
-            <ul>
-            <li><a href="index.html"><h2 class="enlace">Inicio</h2></a></li>
-            <li><a href="product.html"><h2 class="enlace">Productos</h2></a></li>   
-            <li><a href="contact.html"><h2 class="enlace">Contacto</h2></a></li>    
-        </ul>
-        </ul>
-        </nav>
+    <header>
+        <div class="titulo">
+            <nav>
+                <ul>
+                    <li><a href="index.html"><h2 class="enlace">Inicio</h2></a></li>
+                    <li><a href="product.html"><h2 class="enlace">Productos</h2></a></li> 
+                    <li><a href="contact.html"><h2 class="enlace">Contacto</h2></a></li>   
+                </ul>            
+            </nav>        
         </div>
-        <section class="form-contact">
-            <h4>Formulario de contacto</h4>
-            <form onsubmit="return validar()">
+    </header>
+    <section class="form-contact">
+        <h4>Formulario de Contacto</h4>
+        <form onsubmit="return validar()">
             <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre">
             <input class="controls" type="text" name="apellido" id="apellido" placeholder="Ingrese su apellido">
             <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
             <textarea class="controls" name="user_message" placeholder="Ingrese su consulta" id="consulta"></textarea>
             <input class="controls" type="submit" value="Enviar">
         </form>
-        </section>
+    </section>
         <div class="final"><p id="result">   
             <p id="result_enviado"></p></ul></p>
         </div>
         
-    <br>
+    <footer>            
+        <p class="copy">&copy Escoware - 2023</p>
+    </footer>
  <script src="app.js"></script>
 </body>
 
