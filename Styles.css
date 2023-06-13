@@ -4,58 +4,18 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-.error{
-    box-shadow: 6px 13px 37px rgb(255, 7, 7);
-}
 .form-contact{
-    background: rgba(255, 255, 255,0.2);
-    border-radius: 5px;
+    background-color: gray;
     backdrop-filter: blur(10px);
     width: 350px;
     padding: 30px;
     margin: auto;
     margin-top: 50px; 
-    border-radius: 4px;
     color: white;
-    box-shadow: 7px 13px 37px black;
 }
 #consulta{
     width: 100%;
-    height: 70px;
-}
-.final{
-    opacity: 0%;
-    width: 100%;
-    height: 100%;
-    background: gray;
-    font-size: 20px;
-    background: rgba(255, 255, 255,0.2);
-    border-radius: 5px;
-    backdrop-filter: blur(10px);
-    width: 350px;
-    padding: 30px;
-    margin: auto;
-    margin-top: 25px; 
-    border-radius: 4px;
-    color: white;
-    box-shadow: 7px 13px 37px black;
-}
-.final2{
-    opacity: 0%;
-    width: 100%;
-    height: 100%;
-    background: gray;
-    font-size: 20px;
-    background: rgba(255, 255, 255,0.2);
-    border-radius: 5px;
-    backdrop-filter: blur(10px);
-    width: 350px;
-    padding: 30px;
-    margin: auto;
-    margin-top: 25px; 
-    border-radius: 4px;
-    color: white;
-    box-shadow: 7px 13px 37px black;
+    height: 90px;
 }
 .botons{
     background-color: black;
@@ -70,17 +30,6 @@ padding-left: 5%;
     width: 100%;
     padding: 7px;
     margin-top: 10px;
-    background: white;
-    border: 1px solid black;
-}
-
-.botons {
-    text-align: center;
-    color: black;
-    cursor: pointer;
-}
-.botons:hover{
-    text-decoration: underline;
 }
 .controls{
     width: 100%;
@@ -92,11 +41,9 @@ padding-left: 5%;
 }
 .controls-consullt{
     width: 100%;
-    background: blacks;
     padding: 35px;
     border-radius: 4px;
     margin-bottom: 5px;
-    border: 1px solid black;
     color: black;
     padding-left: 3%;
     padding-right: 9px;
@@ -104,13 +51,6 @@ padding-left: 5%;
 }
 body{
     background-color: #fff; 
-}
-.titulo{
-    width: 100%;
-    margin: auto;
-    border: 1px rgba(255, 255, 255,0.2);
-    text-decoration: none;
-    
 }
 .texto{
     width: 100%;
@@ -120,9 +60,8 @@ body{
 }
 .Biografia{
     background-color: rgb(61, 61, 61);
-    box-shadow: 7px 13px 37px black;
     margin: 25px;
-    padding: 1% ;
+    padding: 8% ;
 }
 .Biografia p{
     text-decoration: none;
@@ -138,16 +77,11 @@ nav ul li{
     margin: 10px;
     line-height: 30px;
     display: flex;
-    align-items: center;
 }
 nav{
-   background: rgba(255, 255, 255,0.2);
     height: 50px;
     border-radius: 5px;
     backdrop-filter: blur(20px);
-}
-.Clearfix{
-    clear: both;
 }
 .enlace{
     color: black;
@@ -182,27 +116,21 @@ a:hover{
     width: 700px;
     height: 400px;
     background-color: #e0e0e0;
-    box-shadow: 7px 13px 37px black;
     overflow: hidden;
 }
-
 .carruseles{
     width: 400%;
     height: 100%;
     display: flex;
 }
-
 .carrusel-section{
     width: calc(100% / 4);
     height: 100%;
-    
 }
-
 .carrusel-section img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
 }
 .boton-left,
 .boton-right {
@@ -214,23 +142,22 @@ a:hover{
     border-radius: 150%;
     cursor: pointer;
     color: #ffffff81;
+}
 
-}
-.boton-left:hover,
-.boton-right:hover {
-    background-color: #333333d4;
-    color: #fff;
-}
 .boton-left {   
     left: 10px;
+    transform:rotate(180deg)
 }
 .boton-right {
     right: 10px;
-    transform:rotate(180deg)
 }
 .contenedor_1{
     padding-top: 50px;
     padding-bottom: 50px;
     justify-content: center;
     display: flex;
+}
+.error{
+  border-radius: 10px;
+  color: red;
 }
