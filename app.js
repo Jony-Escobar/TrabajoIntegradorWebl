@@ -6,39 +6,37 @@ carrousel=document.querySelectorAll(".carrusel-section"),
 final=document.querySelector(".final");
 let op=0, tamaño=100 / carrousel.length, cont=0, contador2, contador3;
 
-if (btn_der) {
-    btn_der.addEventListener("click",()=> derecha());
-}
-if (btn_izq) {
-    btn_izq.addEventListener("click",()=> izquierda());
-}
+const images = [
+    "img/cargador_eco_lets.jpg",
+    "img/cargador_lets.webp",
+    "img/cargador_samsung.jpg",
+    "img/usb_simil_orig.jpg"
+];
 
-function derecha() {
-    if (cont >=carrousel.length-1) {
-        cont=0;
-        op=0;
-        slider.style.transform = `translate(-${op}%)`;
-        slider.style.transition="all ease .8s"
-    }else{
-        cont++;
-        op=op+tamaño
-    slider.style.transform = `translate(-${op}%)`;
-    slider.style.transition="all ease .8s"
+let slideIndex = 0;
+const totalSlides = images.length;
+
+btn_izq.addEventListener("click", () => {
+    slideIndex--;
+    if (slideIndex < 0 ) {
+        slideIndex = totalSlides - 1;
     }
-}
-function izquierda() {
-    cont--;
-    if (cont <0) {
-        cont=carrousel.length-1;
-        op=tamaño*(carrousel.length-1);
-        slider.style.transform = `translate(-${op}%)`;
-        slider.style.transition="all ease .8s"
-    }else{
-        op=op-tamaño
-        slider.style.transform = `translate(-${op}%)`;
-        slider.style.transition="all ease .8s"
+    updateSlider();
+});
+
+btn_der.addEventListener("click", () => {
+    slideIndex++;
+    if (slideIndex >= totalSlides ) {
+        slideIndex = 0;
     }
-}
+    updateSlider();
+});
+
+function updateSlider() {
+    slider.innerHTML = `<img src="${images[slideIndex]}" alt="Slide">`;
+  }
+
+updateSlider();
 
 function validar(){
     let
